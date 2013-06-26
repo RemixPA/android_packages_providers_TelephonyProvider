@@ -233,7 +233,6 @@ public class BlacklistProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Cannot delete that URI: " + uri);
         }
 
-        count = db.delete(BLACKLIST_TABLE, where, whereArgs);
         if (DEBUG) Log.d(TAG, "delete result count " + count);
 
         if (count > 0) {
